@@ -1,4 +1,4 @@
 # ORAORA オラオラ
-```If you wathed Jojo you've already heard ORARORA.```
+```If you watched Jojo you've already heard ORARORA.```
 
 ## To be continued...
