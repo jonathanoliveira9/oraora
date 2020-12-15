@@ -14,7 +14,7 @@
       <td><%= user.name %></td>
       <th><%= user.email %></th>
       <th>
-        <%= link_to '#', class: "btn btn-outline-primary btn-sm" do %>
+        <%= link_to edit_user_path(user), remote: true, class: "btn btn-outline-primary btn-sm" do %>
           <i class="far fa-edit"></i>
         <% end%>
       </th>
@@ -27,3 +27,5 @@
   <% end %>
   </tbody>
 </table>
+
+<%= render 'modal/modal_body'%>

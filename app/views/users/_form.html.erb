@@ -1,0 +1,15 @@
+<%= form_with model: @user do |form| %>
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "form-control" %>
+  </div>
+  
+  <div class="modal-footer">
+    <%= form.submit @user.new_record? ? 'Create' : 'Update', class: 'btn btn-dark' %>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  </div>
+<% end %>
