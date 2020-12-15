@@ -1,7 +1,21 @@
-<ul class="list-group list-group-flush">
-  <% @users.each do |user| %>
-    <li class="list-group-item"><%= user.name %> <span class="nav-link"><%= user.email %></span></li>
-    <%= link_to 'Show', '#', class: "btn btn-success" %>
 
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">E-mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each_with_index do |user, i| %>
+    <tr>
+      <th><%= i + 1 %></th>
+      <td><%= user.name %></td>
+      <th><%= user.email %></th>
+      <th> <%= link_to 'Show', '#', class: "btn btn-success" %></th>
+      <th><%= link_to 'Destroy', '#', class: "btn btn-success" %></th>
+    </tr>
   <% end %>
-</ul>
+  </tbody>
+</table>
