@@ -13,8 +13,16 @@
       <th><%= i + 1 %></th>
       <td><%= user.name %></td>
       <th><%= user.email %></th>
-      <th> <%= link_to 'Show', '#', class: "btn btn-success" %></th>
-      <th><%= link_to 'Destroy', '#', class: "btn btn-success" %></th>
+      <th>
+        <%= link_to '#', class: "btn btn-outline-primary btn-sm" do %>
+          <i class="far fa-edit"></i>
+        <% end%>
+      </th>
+      <th>
+        <%= link_to '#', class: "btn btn-outline-danger btn-sm" do %>
+          <i class="far fa-trash-alt"></i>
+        <% end %>
+      </th>
     </tr>
   <% end %>
   </tbody>

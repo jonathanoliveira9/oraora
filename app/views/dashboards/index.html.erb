@@ -5,7 +5,9 @@
   </div>
 </div>
 <div class="container">
-  <%= link_to 'New Users', new_user_path, remote: true, class:"btn btn-success" %>
+  <%= link_to new_user_path, remote: true, class:"btn btn-outline-success" do %>
+    <i class="fas fa-user-plus"></i>
+ <% end %>
 </div>
 <hr>
 <div class="container">
