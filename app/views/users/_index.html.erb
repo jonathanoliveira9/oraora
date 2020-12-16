@@ -1,0 +1,31 @@
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">E-mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each_with_index do |user, i| %>
+    <tr>
+      <th><%= i + 1 %></th>
+      <td><%= user.name %></td>
+      <th><%= user.email %></th>
+      <th>
+        <%= link_to edit_user_path(user), remote: true, class: "btn btn-outline-primary btn-sm" do %>
+          <i class="far fa-edit"></i>
+        <% end%>
+      </th>
+      <th>
+        <%= link_to user, method: :delete, data: { confirm: 'Are you sure want to delete this data? '}, class: "btn btn-outline-danger btn-sm" do %>
+          <i class="far fa-trash-alt"></i>
+        <% end %>
+      </th>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= render 'modal/modal_body'%>

@@ -1,0 +1,17 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Oraora</h1>
+    <p class="lead">This app is too send mass deliver mail to users using sidekiq.</p>
+  </div>
+</div>
+<div class="container">
+  <%= link_to new_user_path, remote: true, class:"btn btn-outline-success" do %>
+    <i class="fas fa-user-plus"></i>
+ <% end %>
+</div>
+<hr>
+<div class="container">
+  <ul class="list-group">
+    <%= render 'users/index' %>
+  </ul>
+</div>
