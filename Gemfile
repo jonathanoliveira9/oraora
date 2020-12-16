@@ -27,6 +27,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 # Notification
 gem 'toastr-rails'
+# Tinymce-Rails
+gem 'tinymce-rails'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
