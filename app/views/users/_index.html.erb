@@ -19,7 +19,7 @@
         <% end%>
       </th>
       <th>
-        <%= link_to '#', class: "btn btn-outline-danger btn-sm" do %>
+        <%= link_to user, method: :delete, data: { confirm: 'Are you sure want to delete this data? '}, class: "btn btn-outline-danger btn-sm" do %>
           <i class="far fa-trash-alt"></i>
         <% end %>
       </th>

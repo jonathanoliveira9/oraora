@@ -1,11 +1,4 @@
 class UsersController < ApplicationController
-  def index
-    @users = User.all
-    respond_to do |format|
-      format.html
-    end 
-  end
-
   def new
     @user = User.new
     respond_to do |format|
@@ -17,9 +10,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     respond_to do |format|
       if @user.save
-        format.html {  }
+        format.html { redirect_to root_path }
       else 
-        format.html
+        # ALERT
       end
     end
   end
@@ -27,6 +20,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
+    redirect_to root_path
   end
 
   def show
@@ -44,9 +38,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     respond_to do |format|
       if @user.update_attributes(user_params)
-        format.html {  }
+        format.html {  redirect_to root_path}
       else
-        format.html {  }
+        # Alert
       end
     end
   end
