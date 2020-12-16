@@ -10,9 +10,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     respond_to do |format|
       if @user.save
+        flash[:notice] = "User was created sucessfull"
         format.html { redirect_to root_path }
       else 
-        # ALERT
+        flash[:error] = @user.errors.full_messages
       end
     end
   end
@@ -20,6 +21,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
+    flash[:notice] = "User was deleted sucessfully"
     redirect_to root_path
   end
 
@@ -38,9 +40,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     respond_to do |format|
       if @user.update_attributes(user_params)
+        flash[:notice] = "User was updated sucessfully"
         format.html {  redirect_to root_path}
       else
-        # Alert
+        flash[:error] = @user.errors.full_messages
       end
     end
   end
