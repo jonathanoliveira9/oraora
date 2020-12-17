@@ -1,0 +1,20 @@
+
+default: &default
+  selector: 'textarea.tinymce'
+  content_css: "/assets/tinymce_variable_plugin.css"
+  quickbars_selection_toolbar: "formatselect fontselect fontsizeselect | bold italic underline strikethrough | forecolor backcolor | alignleft aligncenter alignright alignjustify | indent outdent | bullist numlist"
+  quickbars_insert_toolbar: "quickimage quicktable"
+  quickbars_image_toolbar: "alignleft aligncenter alignright | rotateleft rotateright | imageoptions"
+  contextmenu: "link image lists template paste inserttable | cell row column deletetable"
+  toolbar:
+    - styleselect | bold italic | undo redo
+    - image | link
+  plugins:
+    - image
+    - link
+    - advlist autolink lists link image charmap print preview anchor
+    - searchreplace visualblocks fullscreen
+    - insertdatetime media table paste  help wordcount
+  toolbar:
+    - formatselect fontselect fontsizeselect | bold italic underline strikethrough | forecolor backcolor | alignleft aligncenter alignright alignjustify | indent outdent | bullist numlist | link image table template variable
+    - undo redo | preview fullscreen
