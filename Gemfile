@@ -34,7 +34,8 @@ gem 'tinymce-rails'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+# Paginate with pagy
+gem 'pagy', '~> 3.5'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
