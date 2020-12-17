@@ -1,0 +1,16 @@
+<%= tinymce %>
+<div class="flex-container flex-column">
+  <%= form_tag('users/mass_emails', method: :post, class: 'form-horizontal') do %>
+    <div class="flex-item margin-lg">
+      <%= label_tag(:subject, 'Subject', class: 'text-blue-dark margin-b-sm' ) %>
+      <%= text_field_tag(:subject, nil, placelholder: 'Subject', class: 'form-control', required: true ) %>
+    </div>
+    <div class="flex-item margin-lg">
+      <%= label_tag(:body, 'Body', class: 'text-blue-dark margin-b-sm' ) %>
+      <%= text_area_tag(:body, nil, placelholder: 'Subject', class: 'tinymce form-control', rows: 20 ) %>
+    </div>
+    <div class="flex-container space-between margin-t-xxxl">
+      <%= submit_tag 'Send Mail', class: 'btn btn-primary btn-default' %>
+    </div>
+  <% end %>
+</div>
