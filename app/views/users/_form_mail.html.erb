@@ -1,6 +1,7 @@
 <%= tinymce %>
 <div class="flex-container flex-column">
   <%= form_tag('users/mass_emails', method: :post, class: 'form-horizontal') do %>
+    <%= hidden_field_tag :email_list, '' %>
     <div class="flex-item margin-lg">
       <%= label_tag(:subject, 'Subject', class: 'text-blue-dark margin-b-sm' ) %>
       <%= text_field_tag(:subject, nil, placelholder: 'Subject', class: 'form-control', required: true ) %>
