@@ -51,7 +51,7 @@ class UsersController < ApplicationController
   end
 
   def mass_emails
-    byebug
+    emails = params[:email_list].split(',')
   end
 
   private
