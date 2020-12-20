@@ -9,7 +9,9 @@
   </thead>
   <tbody>
     <% @users.each_with_index do |user, i| %>
+
     <tr>
+    <th><input type="checkbox" name="email-check" class="form-check-input" id="email_check" value="<%= user.email %>"></th>
       <th><%= i + 1 %></th>
       <td><%= user.name %></td>
       <th><%= user.email %></th>

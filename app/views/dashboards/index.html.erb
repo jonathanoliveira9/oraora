@@ -5,9 +5,15 @@
   </div>
 </div>
 <div class="container">
-  <%= link_to new_user_path, remote: true, class:"btn btn-outline-success" do %>
+  <%= link_to new_user_path, remote: true, class:"btn" do %>
     <i class="fas fa-user-plus"></i>
  <% end %>
+  <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal" id="modal-mailer" style="display:none;">
+    <i class="far fa-paper-plane"></i>
+  </button>
+  <%= link_to "#", class: 'btn' do %>
+  <% end %>
+
 </div>
 <hr>
 <div class="container">
@@ -15,3 +21,14 @@
     <%= render 'users/index' %>
   </ul>
 </div>
+<%= render 'modal/modal_body'%>
+
+<script>
+  $(document).ready(function(){
+    $('#modal-mailer').on('click', function() {
+      $('#modal_header').modal('show')
+      $('#modal_body').html('<%= j render("users/form_mail")%>')
+    })
+  })
+</script>
+<%= javascript_include_tag 'user' %>

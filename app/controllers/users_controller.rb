@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def new
     @user = User.new
     respond_to do |format|
@@ -46,6 +48,10 @@ class UsersController < ApplicationController
         flash[:error] = @user.errors.full_messages
       end
     end
+  end
+
+  def mass_emails
+    emails = params[:email_list].split(',')
   end
 
   private
