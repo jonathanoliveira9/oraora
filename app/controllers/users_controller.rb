@@ -52,6 +52,13 @@ class UsersController < ApplicationController
 
   def mass_emails
     emails = params[:email_list].split(',')
+    body = params[:body]
+    subject = params[:subject]
+    emails.each do |email|
+      UsersMailer.custom_message(subject, body, email).deliver_later
+    end
+    flash[:notice] = "Mail send"
+    redirect_to root_path
   end
 
   private
