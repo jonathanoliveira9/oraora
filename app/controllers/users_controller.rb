@@ -57,7 +57,7 @@ class UsersController < ApplicationController
     emails.each do |email|
       UsersMailer.custom_message(subject, body, email).deliver_later
     end
-    flash[:notice] = "Mail send"
+    flash[:notice] = "Sending Messages"
     redirect_to root_path
   end
 
