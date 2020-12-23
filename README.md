@@ -22,5 +22,8 @@ $ git db:create
 $ git db:migrate
 $ rails s
 
+Start Redis
+$ redis-server
+
 To start sidekiq
 $ bundle exec sidekiq -q mailers
