@@ -8,7 +8,7 @@
   <%= link_to new_user_path, remote: true, class:"btn" do %>
     <i class="fas fa-user-plus"></i>
  <% end %>
-  <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal" id="modal-mailer" style="display:none;">
+  <button type="button" class="btn" id="modal-mailer" style="display:none;">
     <i class="far fa-paper-plane"></i>
   </button>
   <%= link_to "#", class: 'btn' do %>
@@ -28,7 +28,16 @@
     $('#modal-mailer').on('click', function() {
       $('#modal_header').modal('show')
       $('#modal_body').html('<%= j render("users/form_mail")%>')
+      email_list()
     })
   })
+
+  function email_list() {
+  var email_list = []
+  $('#email_check:checked').each(function(){
+    email_list.push(this.value)
+  })
+  $('#email_list').val(email_list)
+}
 </script>
 <%= javascript_include_tag 'user' %>
