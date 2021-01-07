@@ -18,8 +18,8 @@ $ sudo redis-server
 Just clone the repository, install the bundle and run the migrations. After that, are you free to do anything.
 $ git clone git@github.com:jonathanoliveira9/oraora.git
 $ bundle
-$ git db:create
-$ git db:migrate
+$ rails db:create
+$ rails db:migrate
 $ rails s
 
 Start Redis
